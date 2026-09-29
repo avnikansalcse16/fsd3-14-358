@@ -1,9 +1,16 @@
 const b1 = {
-  picURL: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
-  bname: "React Design Patterns",
-  price: 765.00,
-  quantity: 5,
-  rating: 5
+picURL: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
+bname: "React Design Patterns",
+price: 765.00,
+quantity: 5,
+rating: 5
+};
+const b2 = {
+picURL: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
+bname: "React Native Cookbook",
+price: 699.00,
+quantity: 3,
+rating: 4
 };
 
 
@@ -25,11 +32,11 @@ function Book() {
   export default function App() {
   return (
     <>
-    <book />
+    <book book={b1} />
     <h1> Hello React</h1>
-    <Book />
-    <Book />
-    <Book />
+    <Book book={b2} />
+    <Book book={b1} />
+    <Book book={b2} />
     </> 
   );
 }
