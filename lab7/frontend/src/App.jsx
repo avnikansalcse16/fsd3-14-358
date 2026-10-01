@@ -1,42 +1,72 @@
+import Book from "./components/Book";
+import Pen from "./components/pen";
+
+
 const b1 = {
-picURL: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
-bname: "React Design Patterns",
-price: 765.00,
-quantity: 5,
-rating: 5
+  picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
+  bname: "React design pattern",
+  price: 899,
+  quantity: 10,
+  rating: 4.7,
 };
+
 const b2 = {
-picURL: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
-bname: "React Native Cookbook",
-price: 699.00,
-quantity: 3,
-rating: 4
+  picUrl: "https://m.media-amazon.com/images/I/518+W2zr3BL._AC_UY327_FMwebp_QL65_.jpg",
+  bname: "The Road to React",
+  price: 1259,
+  quantity: 12,
+  rating: 4.9,
 };
 
+const p1 = {
+  picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
+  company: "Montblanc",
+  price: 500,
+};
 
-function Book() {
-  return (
-    <div>
-      <img 
-      src={b1.picURL}
-      alt={b1.bname}
-    />
-    <h1>{b1.bname}</h1>
-    <h2>Price: {b1.price}</h2>
-    <h3>Quantity: {b1.quantity}</h3>
-    <h4>Rating: {b1.rating}/5</h4>
-</div>
-  );
-  }
+const p2 = { 
+  picUrl:"https://m.media-amazon.com/images/I/71wea3sEROL._AC_UL480_FMwebp_QL65_.jpg",
+  company: "Woodsworth",
+  price: 1000,
+};
+
+function Book(props) {
+  const {bname, price, quantity, rating, picUrl} = props.book;
+  const qstyle={
+    fontSize: '1rem',
+    color: 'blue',
+    textAlign: 'center',
+    backgroundColor: "lightgray",
+    padding: '10px',
+  };
  
-  export default function App() {
+  return (
+    <div className="book">
+      <img
+        src={picUrl}
+        alt={bname}
+      />
+      <h1>{bname}</h1>
+      <h2>Price: {price}</h2>
+      <h3>Quantity: {quantity}</h3>
+      <h4 style={{ color: 'red', textAlign: 'center' }}>Rating: {rating}</h4>
+      <button>Buy Now</button>
+    </div>
+  );
+}
+
+export default function App() {
   return (
     <>
-    <book book={b1} />
-    <h1> Hello React</h1>
-    <Book book={b2} />
-    <Book book={b1} />
-    <Book book={b2} />
-    </> 
+    <h1>Online Book store</h1>
+    <div className="container">
+      <Book book={b2} />
+      <Book book={b1} />
+      <Book book={b2} />
+      <Pen pen={p1} />
+      <Pen pen={p2} />
+      </div>
+    </>
+
   );
 }

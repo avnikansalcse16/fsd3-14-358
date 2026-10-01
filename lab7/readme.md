@@ -27,3 +27,25 @@
 2. It must start with capital letter.
 3. It should be treated as html tag.
 4. It must be closed.
+
+# Object destructure
+function Book(props) {
+  const {bname, price, quantity, rating, picUrl} = props.book;
+ 
+ Does not depends on order this property is not available then it is initalized with none.
+Any components include styles 
+1. External CSS = Create class index.html and use in component.
+2. Internal CSS = create property as object like 
+```
+ const qstyle={
+    fontSize: '1rem',
+    color: 'blue',
+    textAlign: 'center',
+    backgroundColor: "lightgray",
+    padding: '10px',
+  };
+ ```
+ then apply with object attribute and pass the object.
+ 3. Inline CSS= In this method we use two curly bracket with style attribute . All the css property must be single word.
+ For ex: text and align becomes = textAlign
+ 
