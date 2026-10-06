@@ -1,33 +1,9 @@
 import Book from "./components/Book";
 import Pen from "./components/pen";
-
-const b1 = {
-  picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
-  bname: "React design pattern",
-  price: 899,
-  quantity: 10,
-  rating: 4.7,
-};
-
-const b2 = {
-  picUrl: "https://m.media-amazon.com/images/I/518+W2zr3BL._AC_UY327_FMwebp_QL65_.jpg",
-  bname: "The Road to React",
-  price: 1259,
-  quantity: 12,
-  rating: 4.9,
-};
-
-const p1 = {
-  picUrl: "https://m.media-amazon.com/images/I/61aYZnnMaHL._AC_UY327_FMwebp_QL65_.jpg",
-  company: "Montblanc",
-  price: 500,
-};
-
-const p2 = {
-  picUrl: "https://m.media-amazon.com/images/I/71wea3sEROL._AC_UL480_FMwebp_QL65_.jpg",
-  company: "Woodsworth",
-  price: 1000,
-};
+import { books } from "./data/Books";
+import { pens } from "./data/pens";
+import Fruit from "./components/fruit";
+import Event from "./components/Event";
 
 export default function App() {
   return (
@@ -35,12 +11,13 @@ export default function App() {
       <h1>Online Book store</h1>
 
       <div className="container">
-        <Book book={b2} />
-        <Book book={b1} />
-        <Book book={b2} />
+        <Book book={books[0]} />
+        <Book book={books[1]} />
 
-        <Pen pen={p1} />
-        <Pen pen={p2} />
+        <Pen pen={pens[0]} />
+        <Pen pen={pens[1]} />
+
+        <Fruit />
       </div>
     </>
   );

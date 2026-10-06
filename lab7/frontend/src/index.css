@@ -1,35 +1,56 @@
-*{
-  margin:0;
-  padding:0;
-  box-sizing: border-box;
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
 }
 
 h1 {
   text-align: center;
 }
-.container{
-  display:flex;
-  gap: 5px;
+
+.container {
+  display: flex;
   flex-wrap: wrap;
-  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-.book{
+/* Book */
+.book {
+  width: 280px;
+  border: 1px solid black;
   padding: 10px;
-  border: 2px solid black;
-}
-.book img{
-  height: 300px;
+  text-align: center;
 }
 
-.book h1{
-  font-size:1.5rem;
+.book img {
+  width: 250px;
+  height: 350px;
+  object-fit: contain;
 }
 
-.book button{
-  width: 200px;
-  background-color: green;
-  color: white;
-  padding: 5px;
-  font-size: 1.25rem;
+/* Pen */
+.pen {
+  width: 280px;
+  border: 1px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+.pen img {
+  width: 250px;
+  height: 250px;
+  object-fit: contain;
+}
+
+/* Fruit */
+.fruit {
+  width: 280px;
+  border: 1px solid black;
+  padding: 10px;
+}
+.container img {
+  width: 180px !important;
+  height: 180px !important;
+  object-fit: contain;
 }

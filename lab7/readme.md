@@ -48,4 +48,6 @@ Any components include styles
  then apply with object attribute and pass the object.
  3. Inline CSS= In this method we use two curly bracket with style attribute . All the css property must be single word.
  For ex: text and align becomes = textAlign
- 
+  app.jsx should be minimun code.
+
+  By default button is submit button.
