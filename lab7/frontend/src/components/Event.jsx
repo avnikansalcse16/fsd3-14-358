@@ -4,12 +4,14 @@ const myButton =() => {
         alert("Button Clicked");
     }
 
-    return <button
-    style= {{ height: "40px", width: "100px"}}
-    onClick={handleClick}>
-    
-        Click Me
-    </button>
+    return () => (
+        <button
+           className ="bg-black text-white rounded p3"
+            onClick={handleClick}
+        >
+            Click Me
+        </button>
+    );
 };
 const Event =() => {
     return <div>

@@ -51,3 +51,25 @@ Any components include styles
   app.jsx should be minimun code.
 
   By default button is submit button.
+
+ # Add tailwind to existing react project
+ 1. open terminal and go to project frontend folder 
+ 2. install tailwind by 
+ `npm install tailwindcss @tailwindcss/vite`
+ 3. open vite.config.js
+ 4. add `tailwindcss()` after react()
+ 5. the file should look like
+
+ ```
+ import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+import { defineConfig } from 'vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+});
+``
+6. opem index.css and remove all contents, then add below line
+`@import "tailwindcss";` 
